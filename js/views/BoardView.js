@@ -48,6 +48,18 @@ define(function(require, exports, module) {
 
         render: function() {
 
+            var templateStr = [
+                '<% _.each(shapes, function(shapeStr) { %>',
+                '<div class="<%= shapeStr %> shape"><%= shapeStr %></div>',
+                '<% }); %>',
+                '<div class="save btn">Save</div>',
+                '<div class="load btn">Load</div>',
+            ].join('\n');
+
+            var availableShapes = ['circle', 'square'];
+
+            this.el.innerHTML = _.template(templateStr, {  shapes: availableShapes});
+
             this.$el.find('.circle').addClass('active');
 
             var canvasDiv = document.createElement('div');
