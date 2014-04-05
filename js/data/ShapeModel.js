@@ -5,10 +5,7 @@ define(function(require, exports, module) {
     
     var ShapeModel = Backbone.Model.extend({
 
-        initialize: function(coords) {
-            
-            this.set('xCoord', coords.xCoord);
-            this.set('yCoord', coords.yCoord);
+        initialize: function(bone) {
 
         },
 

@@ -12,6 +12,15 @@ define(function(require, exports, module) {
             this.set('shapes', collection);
         },
 
+        addShape: function(type, x, y) {
+            console.log(x);
+            this.get('shapes').push({
+                xCoord: x,
+                yCoord: y,
+                type: type
+            });
+        },
+
         toJSON: function() {
             var json = _.clone(this.attributes);
 
