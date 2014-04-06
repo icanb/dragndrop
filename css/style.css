@@ -74,3 +74,14 @@ body {
   background-color: #cce;
 }
 
+.bottom-links {
+  text-align: center;
+  margin-top: 15px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  font-size: 14px;
+  margin-right: 15px;
+}
+
